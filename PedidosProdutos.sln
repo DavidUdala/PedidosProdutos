@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PedidosProdutos.API", "PedidosProdutos.API\PedidosProdutos.API.csproj", "{A3BEFD15-8A8B-4676-81C7-C84C42EC2685}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3BEFD15-8A8B-4676-81C7-C84C42EC2685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3BEFD15-8A8B-4676-81C7-C84C42EC2685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3BEFD15-8A8B-4676-81C7-C84C42EC2685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3BEFD15-8A8B-4676-81C7-C84C42EC2685}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44C65177-075E-41BC-A8D0-C8CCE136F9A0}
+	EndGlobalSection
+EndGlobal
