@@ -1,11 +1,30 @@
+using Microsoft.EntityFrameworkCore;
+using PedidosProdutos.Dominio.Entidades;
+using PedidosProdutos.Dominio.Mapper;
+using PedidosProdutos.Infra.Repositorios;
+using PedidosProdutos.Infra.Contextos;
+using PedidosProdutos.Dominio.Interfaces;
+using System.Text.Json.Serialization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+builder.Services.AddDbContext<PedidosProdutosContexto>((options) =>
+{
+    options
+        .UseSqlServer(builder.Configuration["ConnectionStrings:PedidosProdutosDB"]);
+});
+
+builder.Services.AddScoped<IPedidoRepositorio, PedidoRepositorio>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 builder.Services.AddControllers();
+
+
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 var app = builder.Build();
 
@@ -23,6 +42,5 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 
 await app.RunAsync();
